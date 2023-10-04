@@ -459,7 +459,33 @@ Installation steps:
     3. __Grant necessary permissions in the "Actions" settings under "Settings" for the workflow to run__. `Settings`>`Actions`>`General`>`Workflow Permissions`> `Enable Read and Write Permissions
     4. With these steps, your GitHub repository is now configured with the GitHub Actions workflow for automated deployment using Argo CD.
 
+14. __Accessing Locally with Custom Domain and Minikube Tunnel (MacBook)__
 
-14. When changes are pushed to the main branch, the workflow will automate Docker image building, values.yaml updating, and pushing changes to your repository.
+    Step 1: Modify the Hosts File:
+
+    To access a service locally using the custom domain "pintu.doraemon.local," you need to update your local machine's /etc/hosts file. Open the /etc/hosts file with administrative privileges (on Linux/Unix-based systems) and add the following line at the end of the file:
+
+    ```
+      127.0.0.1 pintu.doraemon.local
+
+    ```
+
+    This entry tells your computer to redirect requests for "pintu.doraemon.local" to your local machine (127.0.0.1).
+
+    Step 2: Start Minikube Tunnel
+
+    Minikube is a local Kubernetes cluster manager. To ensure that requests to your custom domain are correctly routed to services running in your Minikube cluster, you need to start Minikube's tunnel feature. Open a terminal or command prompt and run the following command:
+
+    ```
+      minikube tunnel
+
+    ```
+
+    The minikube tunnel command sets up a network route between your local machine and the Minikube cluster, allowing traffic to flow smoothly between them.
+
+    Now, you can access services within your Minikube cluster using the custom domain `pintu.doraemon.local` as if they were running locally on your machine. This setup is particularly useful for local development and testing with custom domains.
+    
+
+15. When changes are pushed to the main branch, the workflow will automate Docker image building, values.yaml updating, and pushing changes to your repository.
    
     
