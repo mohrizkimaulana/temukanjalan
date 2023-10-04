@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-app-deployment
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: nodejs-backend
+  template:
+    metadata:
+      labels:
+        app: nodejs-backend
+    spec:
+      containers:
+      - name: nodejs-backend
+        image: mohrizkimaulana/app-node:{{ .Values.env.APP_VERSION }}
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
