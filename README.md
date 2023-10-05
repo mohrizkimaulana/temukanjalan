@@ -33,7 +33,7 @@ Welcome to our CICD Pipeline with GitLab, DockerHub, ArgoCD, Kubernetes (Minikub
 
 # Infrastructure, Code and Pipeline Provision
 
-Requirements:
+`Requirements:`
 
 - Docker
   
@@ -44,7 +44,8 @@ Requirements:
 - Helm
 
 
-Installation steps:
+
+`Installation steps:`
 
 1. __Install docker__
 
