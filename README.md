@@ -1,5 +1,5 @@
 ## Architecture
-<img width="1329" alt="Screenshot 2023-10-04 at 17 36 52" src="https://github.com/mohrizkimaulana/ngetes/assets/54239628/b585d481-3cb0-4f31-b573-268c540546cd">
+<img width="1329" alt="Screenshot 2023-10-04 at 17 36 52" src="https://github.com/mohrizkimaulana/temukanjalan/assets/54239628/062e6c15-d0b2-4b11-9031-6a4c14b7b1d0">
 
 # Overview:
 
